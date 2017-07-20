@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+import de.dittich.listener.JoinQuit;
+import de.dittich.utils.GameManager;
+
 public class Bedwars extends JavaPlugin{
 	
 	public static ArrayList<String> rot = new ArrayList<String>();
@@ -16,8 +19,12 @@ public class Bedwars extends JavaPlugin{
 	public static boolean canRespawnGruen = true;
 	public static boolean canRespawnBlau = true;
 	
+	public static Bedwars plugin;
+	
 	public void onEnable(){
-		
+		GameManager.setState(GameManager.LOBBY);
+		plugin = this;
+		this.getServer().getPluginManager().registerEvents(new JoinQuit(), this);
 	}
 	
 }
