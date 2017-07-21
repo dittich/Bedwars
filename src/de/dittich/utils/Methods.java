@@ -10,16 +10,16 @@ public class Methods {
 		
 		String s;
 		
-		if(Bedwars.rot.contains(p)){
+		if(Bedwars.rot.contains(p.getName())){
 			s = "§7⇨§4 Rot";
 		}
-		else if(Bedwars.gelb.contains(p)){
+		else if(Bedwars.gelb.contains(p.getName())){
 			s = "§7⇨§e Gelb";
 		}
-		else if(Bedwars.gruen.contains(p)){
+		else if(Bedwars.gruen.contains(p.getName())){
 			s = "§7⇨§a Gruen";
 		}
-		else if(Bedwars.blau.contains(p)){
+		else if(Bedwars.blau.contains(p.getName())){
 			s = "§7⇨§9 Blau";
 		}
 		else{
@@ -33,16 +33,16 @@ public class Methods {
 		
 		String s;
 		
-		if(Bedwars.rot.contains(p)){
+		if(Bedwars.rot.contains(p.getName())){
 			s = "Rot";
 		}
-		else if(Bedwars.gelb.contains(p)){
+		else if(Bedwars.gelb.contains(p.getName())){
 			s = "Gelb";
 		}
-		else if(Bedwars.gruen.contains(p)){
+		else if(Bedwars.gruen.contains(p.getName())){
 			s = "Gruen";
 		}
-		else if(Bedwars.blau.contains(p)){
+		else if(Bedwars.blau.contains(p.getName())){
 			s = "Blau";
 		}
 		else{
@@ -50,6 +50,13 @@ public class Methods {
 		}
 		
 		return s;
+	}
+	
+	public static void clearFromArray(Player p){
+		Bedwars.rot.remove(p.getName());
+		Bedwars.gelb.remove(p.getName());
+		Bedwars.gruen.remove(p.getName());
+		Bedwars.blau.remove(p.getName());
 	}
 	
 }

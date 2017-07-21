@@ -5,7 +5,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.entity.Villager;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.EntityCombustByEntityEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 
@@ -20,7 +19,7 @@ public class DamageHandler implements Listener{
 		if(e.getEntity() instanceof Player){
 			Player p = (Player)e.getEntity();
 			
-			if(GameManager.isState(GameManager.LOBBY)){
+			if(GameManager.isState(GameManager.LOBBY) || GameManager.isState(GameManager.Restart)){
 				e.setCancelled(true);
 			}
 			else if(GameManager.isState(GameManager.GAME)){
@@ -53,7 +52,7 @@ public class DamageHandler implements Listener{
 	}
 	
 	public void onDamageVillager(EntityDamageEvent e){
-		if(GameManager.isState(GameManager.LOBBY)){
+		if(GameManager.isState(GameManager.LOBBY) || GameManager.isState(GameManager.Restart)){
 			e.setCancelled(true);
 		}
 		else if(GameManager.isState(GameManager.GAME)){

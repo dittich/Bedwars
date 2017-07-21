@@ -19,6 +19,10 @@ public class Bedwars extends JavaPlugin{
 	public static boolean canRespawnGruen = true;
 	public static boolean canRespawnBlau = true;
 	
+	public static String pr = "§f[§bBedwars§f]§b ";
+	public static String a = "§b";
+	public static String n = "§7";
+	
 	public static Bedwars plugin;
 	
 	public void onEnable(){
