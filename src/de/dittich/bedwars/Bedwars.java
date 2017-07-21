@@ -9,6 +9,8 @@ import de.dittich.utils.GameManager;
 
 public class Bedwars extends JavaPlugin{
 	
+	public static ArrayList<String> build = new ArrayList<String>();
+	
 	public static ArrayList<String> rot = new ArrayList<String>();
 	public static ArrayList<String> gelb = new ArrayList<String>();
 	public static ArrayList<String> gruen = new ArrayList<String>();
